@@ -1,0 +1,5 @@
+langchain
+gradio
+SPARQLWrapper
+jupyterlab
+openai==0.27.2
