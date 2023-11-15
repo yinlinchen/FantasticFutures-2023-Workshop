@@ -3,7 +3,11 @@
 * [GitHub Codespaces](https://docs.github.com/en/codespaces/getting-started/quickstart)
 
 ## OpenAI account
+* [Join OpenAI](https://platform.openai.com/signup)
 * [Developer quickstart](https://platform.openai.com/docs/quickstart?context=python)
+
+## Hugging Face account
+* [Join Hugging Face](https://huggingface.co/join)
 
 ## Setting up a Python environment using conda
 Here's how you can create a Python 3.10 environment:
