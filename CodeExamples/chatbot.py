@@ -6,12 +6,11 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import openai
 import gradio as gr
 
-
 llm = ChatOpenAI(temperature=0.1, model='gpt-4')
 
 
 def generate_sparql_query(message):
-    template = """generate a sparql query to dbpedia without explaination for {user_question}"""
+    template = """generate only a sparql query to dbpedia without explaination and without using code formatting syntax specific to markdown for {user_question}"""
 
     prompt = PromptTemplate(template=template, input_variables=["message"])
     llm_chain = LLMChain(prompt=prompt, llm=llm)
@@ -21,15 +20,25 @@ def generate_sparql_query(message):
 
 
 def perform_sparql_query(sparql_query):
-    sparql = SPARQLWrapper("http://dbpedia.org/sparql")
-    sparql.setQuery(sparql_query)
-    sparql.setReturnFormat(JSON)
-    return sparql.query().convert()
+    try:
+        sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+        sparql.setQuery(sparql_query)
+        sparql.setReturnFormat(JSON)
+        return sparql.query().convert()
+    except Exception as e:
+        print(f"An error occurred: {e}")  # Logging the exception
+        return None  # Return None or an appropriate value indicating a failure
 
 
 def create_natural_language_query(results, user_question):
-    key_value_pairs = [f"{key}: {value['value']}" for item in results['results']
-                       ['bindings'] for key, value in item.items()]
+    if not results or 'results' not in results or not results['results']['bindings']:
+        return "The information cannot be found. Please try another question."
+
+    key_value_pairs = [
+        f"{key}: {value['value']}"
+        for item in results['results']['bindings']
+        for key, value in item.items()
+    ]
     return f"The information for your query '{user_question}' is as follows: {'; '.join(key_value_pairs)}."
 
 
