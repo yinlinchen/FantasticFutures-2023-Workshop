@@ -1,9 +1,11 @@
 # FantasticFutures-2023-Workshop
 
-<center> <h2>
-<a href="https://ff2023.archive.org/">Fantastic Futures Annual International Conference</a> - November 15-17 2023 <br/>
-AI for Libraries, Archives, and Museums <br/>
-Internet Archive Canada | Vancouver, Canada | November 2023 <br/> </h2>
+<center>
+    <h2>
+        <a href="https://ff2023.archive.org/">Fantastic Futures Annual International Conference</a> <br/>
+        AI for Libraries, Archives, and Museums <br/>
+        Internet Archive Canada | Vancouver, Canada | November 15-17, 2023
+    </h2>
 </center>
 
 <br/>
