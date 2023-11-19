@@ -1,5 +1,13 @@
 # FantasticFutures-2023-Workshop
 
+<center> <h2>
+<a href="https://ff2023.archive.org/">Fantastic Futures Annual International Conference</a> - November 15-17 2023 <br/>
+AI for Libraries, Archives, and Museums <br/>
+Internet Archive Canada | Vancouver, Canada | November 2023 <br/> </h2>
+</center>
+
+<br/>
+
 ## Introducing AI for LAMs: A Beginner Tutorial for Practical Generative AI Use Cases
 
 Generative AI and Large Language Models (LLMs) are transforming various fields, including libraries, archives, and museums (LAMs). This workshop is specifically designed to introduce LAM professionals to the fundamentals of Generative AI and LLMs, utilizing hands-on applications through platforms and frameworks like OpenAI API, Hugging Face, LangChain, and more. Participants will benefit from practical exercises and tutorials, as well as an in-depth demonstration of selected real-world projects that underscore the transformative potential of AI. Moreover, the workshop will include a focused discussion session to foster brainstorming on strategies, methodologies, and the challenges of seamlessly integrating AI into traditional LAM environments.
